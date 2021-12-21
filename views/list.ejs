@@ -1,0 +1,30 @@
+<head>
+    <style>
+        .piece{
+            background-color: lightgrey;
+            padding: 5px;
+            margin: 5px;
+        }
+        .tot{
+            background-color: lightgrey;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Liste des pièces de l'appartement</h1>
+
+    <ul>
+    <% for (let i = 0; i < pieces.length; i++){ %>
+        <div class='piece'>
+            <li> Pièce: <%= pieces[i].piece %> <%= pieces[i].surface %></li>
+        </div>
+        <div class='tot'>
+            <li> Surface total: </li>
+        <div>
+    <% } %>
+    </ul>
+</body>

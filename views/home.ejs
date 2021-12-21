@@ -1,0 +1,92 @@
+<head>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        label{
+            display: inline-block;
+            width: 150px;
+            text-align: left;
+        }
+        div{
+            margin-bottom: 10px;
+        }
+        .w{
+            text-align: center;
+        }
+        .bS{
+            text-align: center;
+            background-color: steelblue;
+            border: gray;
+            border-width: 3px;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            margin-left: 20%;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .bS1{
+            text-align: center;
+            background-color: steelblue;
+            border: gray;
+            border-width: 3px;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            margin-left: 52%;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .tout{
+            width: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            border: 1px lightgrey;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+    let surface = () => {
+        let a = parseInt(document.getElementById('largeur').value);
+        let b = parseInt(document.getElementById('longeur').value);
+        let txt = document.getElementById('fct');
+        let calcul = a*b;
+        txt.innerHTML = calcul + " " +"m2";
+        console.log(txt);
+    }
+    </script>
+
+</head> 
+
+<body>
+    <div class="tout">
+    <h1>Encoder les données de la pièce</h1>
+    <form method="POST">
+        <div class='w'>
+            <div>
+                <label>Pièce:</label>
+                <input type="text" id="piece" name="piece" />
+            </div>
+            <div>
+                <label>Largeur:</label>
+                <input type="text" id="largeur" name="largeur"/> 
+            </div>
+            <div>   
+                <label>Longeur:</label>
+                <input type="text" id="longeur" name="longeur" /> </br> 
+                <input type="submit" class='bS' formaction="/save"/>
+            </div>
+        </div>
+    </form> 
+    <a class='bS1' onclick="surface()">Calculer la surface</a> <span id='fct' name="surface"></span>
+    </div>
+
+
+
+
+</body>
